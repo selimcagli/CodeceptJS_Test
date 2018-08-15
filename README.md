@@ -1,35 +1,35 @@
 # CodeceptJS Test
 
-Test adımlarına başlamadan önce Bilgisayar node.js ve Java JDK kurulu olmalıdır. (Testlerin koşulması için Firefox ve Chrome kurulu olmalıdır, browser codecept.json config dosyası içerisinden değiştirilebilir.) 
+Before test, Node.js and Java must be installed on computer. (To perform tests, Chrome and Firefox must be installed. Browser can be changed by changing codecept.json file)
 
-Testler 2 şekilde yapılabilir
-1. Test içerisindeki ShellScriptler çalıştırılarak. 
-    - Sırası ile:
+Tests can be perform in 2 way
+1. By shell script
+    - In Order:
         - SetupSelenumAndStart.sh
         - SetupAndRunTests.sh
-    - Kurulumlardan sonra tekrar test çalıştırılmak istendiğinde ise aşağıdaki shellscript in çalıştırılması yeterlidir
+    - If you want to run the test again after installation, running the following shellscript is enough
         - RunTests.sh
+        
+2. Applying the fallowing methods in order.
 
-2. Aşağıdaki Yöntemler sırası ile uygulanarak.
+After downloading the project, you can perform the Project1 test by following the steps below. (Project can be download by command line  => git clone https://github.com/selimcagli/CodeceptJS_Test.git)
 
-Projeyi indirdikten sonra aşağıdaki adımları izleyerek Proje1 testini gerçekleştirebilirsiniz. (Proje Komut satırı kullanılarak indirilebilir  => git clone https://github.com/selimcagli/CodeceptJS_Test.git)
-
--	Proje testi için öncelikle “selenium-standalone” u indirip çalıştırmak gerekiyor. “selenium-standalone” u indirmek için: Projenin root klasörü üzerinden komut satırı açılarak:
+-	First of all, To test, “selenium-standalone” must be download and setup. To download “selenium-standalone” : Commands must be run on command line on root directory of project:
     - npm install selenium-standalone@latest
     - selenium-standalone install
     - selenium-standalone start
 
--	Daha sonra CodeceptJS kütüphanesinin  1.1.1 versiyonunu npm aracılığı ile indirmek gerekiyor. CodeceptJS i indirmek için, aşağıdaki komut u çalıştırmak yeterlidir.
+-	After you need to download CodeceptJS@1.1.1 by npm. To download “CodeceptJS”: Commands must be run on command line on root directory of project:
     - npm install codeceptjs@1.1.1
 
--	Testi çalıştırmak için Projenin root klasöründen /node_modules/.bin/ klasöründe aşağıdaki komut satırını çalıştırmak yeterlidir.
+-	The command below must be run on /node_modules/.bin/ directory. 
     - ./codeceptjs run --config=./../../codecept.json --steps
 
--	Projedeki testleri Paralel olarak çalıştırmak için aşağıdaki komut satırını çalıştırmak yeterlidir.
+-	It is enough to run the following command line to run the tests in the project in parallel.
     - ./codeceptjs run-multiple --config=./../../codecept.json --all --steps
 
-Proje config dosyası “codecept.json” dosyasıdır. Test firefox da çalışacak şekilde config ayarı yapılmıştır. Config dosyasından değiştirilebilir. 
-Test i multiple olarak çalıştırmak için gerekli config ayarları mevcuttur. Test multiple olarak çalıştırıldığında;
+Project config file is “codecept.json”. The config has been set to work in test for firefox Test. It can be changed from config file. 
+Config settings are available to run the test multiple times. When the test is run multiple times, The tests will be run in the following order
 - Test1 => firefox
 - Test2 => chrome
-- Test3 => firefox da çalışcak şekilde ayarlanmıştır.
+- Test3 => firefox
