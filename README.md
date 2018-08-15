@@ -14,7 +14,7 @@ Tests can be perform in 2 way
 
 After downloading the project, you can perform the Project1 test by following the steps below. (Project can be download by command line  => git clone https://github.com/selimcagli/CodeceptJS_Test.git)
 
--	First of all, To test, “selenium-standalone” must be download and setup. To download “selenium-standalone” : Commands must be run on command line on root directory of project:
+-	First of all, To run tests, “selenium-standalone” must be downloaded and setup. To download “selenium-standalone”, Commands must be run on command line on root directory of project:
     - npm install selenium-standalone@latest
     - selenium-standalone install
     - selenium-standalone start
