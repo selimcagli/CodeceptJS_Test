@@ -10,7 +10,7 @@ Tests can be perform in 2 way
     - If you want to run the test again after installation, running the following shellscript is enough
         - RunTests.sh
         
-2. Applying the fallowing methods in order.
+2. Applying the following methods in order.
 
 After downloading the project, you can perform the Project1 test by following the steps below. (Project can be download by command line  => git clone https://github.com/selimcagli/CodeceptJS_Test.git)
 
